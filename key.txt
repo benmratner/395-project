@@ -1,0 +1,23 @@
+
+metadata:
+    version:
+        essentia: "2.1-beta3"
+    audio_properties:
+        replay_gain: -16.0959510803
+
+tonal:
+    key_strength: 0.908113956451
+    tuning_cents:
+        max: 57
+        mean: 8.60577964783
+        median: 9
+        min: -24
+        var: 64.0944366455
+    tuning_freq:
+        max: 454.727905273
+        mean: 442.188110352
+        median: 442.293365479
+        min: 433.942382812
+        var: 4.20218229294
+    key: "G#"
+    key_scale: "major"
