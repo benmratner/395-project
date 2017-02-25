@@ -1,5 +1,7 @@
+app/.DS_Store
+.DS_Store
 node_modules/
 extractors/
 app/dist
-app/.DS_Store
-.DS_Store
+
+app/audio
