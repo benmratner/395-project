@@ -44,6 +44,7 @@
     "body-parser": "^1.16.0",
     "express": "^4.14.0",
     "firebase": "^3.7.4",
+    "firebaseui": "^1.0.1",
     "react": "^15.3.1",
     "react-audio-player": "^0.3.2",
     "react-dom": "^15.3.1",
