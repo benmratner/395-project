@@ -1,0 +1,1 @@
+export parabola from './Parabola'

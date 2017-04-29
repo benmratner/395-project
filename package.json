@@ -1,13 +1,14 @@
 {
-  "name": "react-boilerplate",
-  "version": "1.0.0",
+  "name": "harmonizr",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --progress --colors",
+    "start": "webpack-dev-server --progress --colors",
     "dev-server": "webpack-dev-server --open --progress --colors",
     "watch": "webpack --watch",
-    "build-dist": "webpack"
+    "build-dist": "webpack",
+    "server": "node app/server.js"
   },
   "devDependencies": {
     "axios": "^0.15.3",
@@ -42,9 +43,12 @@
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "^4.14.0",
+    "firebase": "^3.7.4",
     "react": "^15.3.1",
     "react-audio-player": "^0.3.2",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "react-router-dom": "^4.1.1",
+    "socket.io": "^1.7.3"
   },
   "author": "",
   "license": "ISC"

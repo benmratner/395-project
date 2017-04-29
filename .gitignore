@@ -5,3 +5,6 @@ extractors/
 app/dist
 
 app/audio
+
+npm-debug.log
+output.json

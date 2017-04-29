@@ -37,8 +37,8 @@ const base = {
         loaders: [
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
             { test: /\.jsx$/, exclude: /node_modules/, loader: "babel-loader" },
-            {test: /\.css$/, loader: 'style!css?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]'},
-            {test: /\.scss$/, loader: 'style!css?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]!sass'},
+            {test: /\.css$/, loader: 'style!css?sourceMap&localIdentName=[name]__[local]___[hash:base64:5]'},
+            {test: /\.scss$/, loader: 'style!css?sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!sass'},
             {test: /\.(png|svg|gif|jpg)$/, loader: 'url-loader?limit=100000' }, 
             {
                 test: /\.(svg(2)?)(\?[a-z0-9]+)?$/,
@@ -70,9 +70,10 @@ const devConfig = {
         progress: true,
         port: 8888,
         stats: 'errors-only',
+        historyApiFallback: true,
         proxy: {
             '/music': {
-                target: 'localhost:3000',
+                target: 'http://localhost:3000',
                 secure: false
             },
         },

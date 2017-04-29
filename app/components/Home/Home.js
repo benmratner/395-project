@@ -1,39 +1,22 @@
 import React from 'react';
-import {Link} from 'react-router';
-import ReactAudioPlayer from 'react-audio-player'
-import {FileUpload} from 'components'
-import img from 'img/maxresdefault.jpg'
-import audio from 'audio/Sleepyhead.mp3'
+import { FileUpload } from 'components'
+import { parabola } from 'sorters'
 import axios from 'axios'
 
 class Home extends React.Component {
     constructor(props) {
-    	super(props);
-    	this.displayName = "Home";
-        this.state = {
-          data_uri: null,
-          processing: false
-        }
+        super(props);
+        this.displayName = "Home";
 
     }
-    handleFile(file, infoObj){
-        this.setState({
-            file,
-            infoObj
-        })
-    }
 
-	render (){
-		return (
+    render() {
+        return (
             <div>
-				<h1>Home Component</h1>
-                <ReactAudioPlayer
-                    src={audio}
-                />
-                <FileUpload onFile={this.handleFile.bind(this)}/>
+                Harmonizr!!!!!
             </div>
-			)
-	}
+        )
+    }
 }
 
 export default Home
