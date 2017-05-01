@@ -10,10 +10,31 @@ import Firebase
 import UIKit
 
 class AllPlaylistTableViewController : UITableViewController{
+    @IBAction func newPlaylist(_ sender: Any) {
+        var alert = UIAlertController(title: "Add a New Playlist", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler:self.handleCancel))
+        
+        alert.addAction(UIAlertAction(title: "Create", style: .default, handler:{ (UIAlertAction) in
+            print(alert.textFields?[0].text)
+        }))
+        
+        alert.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Add a New Playlist"
+        }
+        self.present(alert, animated: true, completion: nil)
+
+
+    }
+    
+    func handleCancel(alertView: UIAlertAction!){
+        print("Canceled")
+    
+    }
     var ref: FIRDatabaseReference!
     var playlistArray = [String]()
     var selectedID = "";
     var selectedName = ""
+    var newPlaylistName:UITextField!
 
     override func viewDidLoad() {
         tableView.delegate = self

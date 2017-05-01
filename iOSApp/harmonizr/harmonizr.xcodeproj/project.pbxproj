@@ -18,6 +18,7 @@
 		AC09F68E1EB3825700933B25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC09F68D1EB3825700933B25 /* GoogleService-Info.plist */; };
 		AC09F6921EB41A2C00933B25 /* AllPlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09F6911EB41A2C00933B25 /* AllPlaylistTableViewController.swift */; };
 		AC09F6941EB4634F00933B25 /* PlaylistSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09F6931EB4634F00933B25 /* PlaylistSongsViewController.swift */; };
+		AC5812221EB74BFB00DC5EE6 /* SearchSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5812211EB74BFB00DC5EE6 /* SearchSongViewController.swift */; };
 		ACEB553C1EB72BC0001C2FE6 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACEB553B1EB72BC0001C2FE6 /* green.jpg */; };
 		ACEB553E1EB7317A001C2FE6 /* equalizer.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEB553D1EB7317A001C2FE6 /* equalizer.png */; };
 		ACEB55401EB736C4001C2FE6 /* PlaylistSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB553F1EB736C4001C2FE6 /* PlaylistSettingsViewController.swift */; };
@@ -58,6 +59,7 @@
 		AC09F68D1EB3825700933B25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC09F6911EB41A2C00933B25 /* AllPlaylistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPlaylistTableViewController.swift; sourceTree = "<group>"; };
 		AC09F6931EB4634F00933B25 /* PlaylistSongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistSongsViewController.swift; sourceTree = "<group>"; };
+		AC5812211EB74BFB00DC5EE6 /* SearchSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSongViewController.swift; sourceTree = "<group>"; };
 		ACEB553B1EB72BC0001C2FE6 /* green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green.jpg; sourceTree = "<group>"; };
 		ACEB553D1EB7317A001C2FE6 /* equalizer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equalizer.png; sourceTree = "<group>"; };
 		ACEB553F1EB736C4001C2FE6 /* PlaylistSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistSettingsViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				AC09F6931EB4634F00933B25 /* PlaylistSongsViewController.swift */,
 				ACEB553F1EB736C4001C2FE6 /* PlaylistSettingsViewController.swift */,
 				AC09F6631EB2B00B00933B25 /* Main.storyboard */,
+				AC5812211EB74BFB00DC5EE6 /* SearchSongViewController.swift */,
 				AC09F6661EB2B00B00933B25 /* Assets.xcassets */,
 				AC09F6681EB2B00B00933B25 /* LaunchScreen.storyboard */,
 				AC09F68D1EB3825700933B25 /* GoogleService-Info.plist */,
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC09F6621EB2B00B00933B25 /* HomeScreenViewController.swift in Sources */,
+				AC5812221EB74BFB00DC5EE6 /* SearchSongViewController.swift in Sources */,
 				AC09F6941EB4634F00933B25 /* PlaylistSongsViewController.swift in Sources */,
 				AC09F6921EB41A2C00933B25 /* AllPlaylistTableViewController.swift in Sources */,
 				AC09F6601EB2B00B00933B25 /* AppDelegate.swift in Sources */,
