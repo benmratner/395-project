@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "harmonizr/AllPlaylistTableViewController.swift"
-            timestampString = "515330942.728212"
+            timestampString = "515344876.391627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,13 +26,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "harmonizr/AllPlaylistTableViewController.swift"
-            timestampString = "515330942.728212"
+            timestampString = "515344876.391627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "getPlaylists()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "harmonizr/AllPlaylistTableViewController.swift"
+            timestampString = "515332875.121798"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "newPlaylist(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "harmonizr.AllPlaylistTableViewController.newPlaylist (Any) -&gt; ()"
+                  moduleName = "harmonizr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhal/Desktop/395-project/iOSApp/harmonizr/harmonizr/AllPlaylistTableViewController.swift"
+                  timestampString = "515331965.656163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "891">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "harmonizr.AllPlaylistTableViewController.(newPlaylist (Any) -&gt; ()).(closure #2)"
+                  moduleName = "harmonizr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhal/Desktop/395-project/iOSApp/harmonizr/harmonizr/AllPlaylistTableViewController.swift"
+                  timestampString = "515331965.660626"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

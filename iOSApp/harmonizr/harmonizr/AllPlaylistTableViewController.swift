@@ -15,9 +15,15 @@ class AllPlaylistTableViewController : UITableViewController{
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler:self.handleCancel))
         
         alert.addAction(UIAlertAction(title: "Create", style: .default, handler:{ (UIAlertAction) in
-            print(alert.textFields?[0].text)
-        }))
+            let refNew = FIRDatabase.database().reference().child("playlistSongs").childByAutoId()
+            let key = refNew.key
+            refNew.setValue(["name": alert.textFields?[0].text])
+            let numPlaylists = self.playlistArray.count + 1
+            let playRef = FIRDatabase.database().reference().child("userPlaylists").child((FIRAuth.auth()?.currentUser?.uid)!)
+            playRef.child("\(numPlaylists)").setValue(key)
         
+        }))
+            
         alert.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Add a New Playlist"
         }
@@ -25,6 +31,8 @@ class AllPlaylistTableViewController : UITableViewController{
 
 
     }
+    
+    
     
     func handleCancel(alertView: UIAlertAction!){
         print("Canceled")
