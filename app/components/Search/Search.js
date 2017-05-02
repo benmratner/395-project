@@ -55,22 +55,28 @@ class Search extends React.Component {
         }
         return (
             <div>
-            Search
-            <input 
-                onChange={this.props.onChange}
-                value={this.props.value}
-            />
-            <table>
-            <tbody>
-            {searchResults}
-            
-            </tbody>
-            <tfoot>
-                <tr className={'gen-row'} onClick={this.handleUploadRowClick.bind(this)}>
-                    <td colSpan="2" className={'gen-cell'}>Don't See the Song You Want? Upload a New Song!</td>
-                </tr>
-            </tfoot>
-            </table>
+                <div className={'searchtext'}>
+                Search
+                </div>
+                <div className={'col-sm-8 col-sm-offset-2'}>
+
+                <input 
+                    onChange={this.props.onChange}
+                    value={this.props.value}
+                    className={'searchbox'}
+                />
+                    <table className={'search-results'}>
+                        <tbody>
+                        {searchResults}
+                        
+                        </tbody>
+                        <tfoot>
+                            <tr className={'gen-row'} onClick={this.handleUploadRowClick.bind(this)}>
+                                <td colSpan="2" className={'gen-cell'}>Don't See the Song You Want? Upload a New Song!</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
         )
     }

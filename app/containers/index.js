@@ -7,6 +7,8 @@ export ConfirmContainer from './Confirm/ConfirmContainer'
 export UploadContainer from './Upload/UploadContainer'
 export AuthContainer from './Auth/AuthContainer'
 export AccountContainer from './Account/AccountContainer'
+export PlaylistContainer from './Playlist/PlaylistContainer'
+
 
 
 

@@ -15,26 +15,6 @@ class NavBar extends React.Component {
     
     render() {
         let userInfo;
-        if (this.props.user){
-            userInfo = (
-                <div>
-                    <li>
-                        <Link to="/playlists">My Playlists</Link>
-                    </li>
-                    <li>
-                    <Link to='/account'>
-                    <img src={this.props.user.photoURL} className={'user-photo'}/>
-                    {this.props.user.email}
-                    </Link>
-                    </li>
-                    <li><div onClick={this.handleLogOut.bind(this)}>Log Out </div></li>
-                </div>
-
-            )
-        } else {
-            userInfo = <AuthContainer onSignIn={this.props.onSignIn} />
-        }
-
         return (
             <nav className={"navbar navbar-default"}>
                 <div className={"navbar-header"}>        
@@ -45,7 +25,20 @@ class NavBar extends React.Component {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/newplaylist'>New Playlist</Link></li>
                         <li><Link to='/upload'>Upload Song</Link></li>
-                        {userInfo}
+                        {this.props.user ? 
+                            <li>
+                                <Link to="/playlists">My Playlists</Link>
+                            </li>
+                            : <AuthContainer onSignIn={this.props.onSignIn} />}
+                        {this.props.user ? 
+                            <div className={'userbox'} >
+                                    <Link to='/account'>
+                                        <img src={this.props.user.photoURL} className={'user-photo'}/>
+                                        {this.props.user.email}
+                                    </Link>
+                                    <div onClick={this.handleLogOut.bind(this)}>Log Out</div>
+                            </div>
+                            : null}
 
                     </ul>
                 </div>
