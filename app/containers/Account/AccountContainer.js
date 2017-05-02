@@ -7,7 +7,11 @@ class AccountContainer extends React.Component {
     
     render() {
         return (
-            <div>AccountContainer</div>
+            <div>
+                <div className={'account-title'}>
+                    <h1>My Playlists</h1>
+                </div>
+            </div>
         )
     }
 }

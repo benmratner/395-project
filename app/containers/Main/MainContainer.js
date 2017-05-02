@@ -37,8 +37,7 @@ class MainContainer extends React.Component {
                 <Route path='/newplaylist' component={PlaylistCreateContainer} />
                 <Route path='/choosewaveform' component={ChooseWaveformContainer} />
                 <Route path='/Upload' component={UploadContainer} />
-                <Route path='/Upload' component={UploadContainer} />
-                <Route path='/account' component={AccountContainer} />
+                <Route path='/playlists' component={AccountContainer} />
 
 
 

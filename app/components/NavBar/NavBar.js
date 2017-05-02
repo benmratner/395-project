@@ -29,7 +29,7 @@ class NavBar extends React.Component {
                             <li>
                                 <Link to="/playlists">My Playlists</Link>
                             </li>
-                            : <AuthContainer onSignIn={this.props.onSignIn} />}
+                            : <AuthContainer  onSignIn={this.props.onSignIn} />}
                         {this.props.user ? 
                             <div className={'userbox'} >
                                     <Link to='/account'>
