@@ -75,6 +75,8 @@ class FileUpload extends Component {
                 uploaded_uri: data.uri,
                 processed_data: data.data,
             });
+        }).catch(err=>{
+            alert(err);
         });
 
         this.disconnectFromSocket(socket);

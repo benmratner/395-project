@@ -34,7 +34,7 @@ class AuthContainer extends React.Component {
     
     render() {
         return (
-            <div id="firebaseui-auth"></div>
+            <div className={'login-box'} id="firebaseui-auth"></div>
         )
     }
 }
