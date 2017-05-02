@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
 import {values} from 'lodash'
-import {SearchContainer, ChooseWaveformContainer, ConfirmContainer} from 'containers'
+import {SearchContainer, ChooseWaveformContainer, ConfirmContainer, PlaylistContainer} from 'containers'
 import parabola from 'sorters/Parabola'
 import {fb as firebase} from 'config/firebase'
 
@@ -25,22 +25,12 @@ class PlaylistCreateContainer extends React.Component {
 
         this.pullFromDB();
     }
-    componentWillUnmount() {
-        this.fb.goOffline();
-    }
-
 
     pullFromDB(){
         let songsObj = {}
         this.fb.ref('songs').orderByChild('title').once('value', snapshot => {
             songsObj = snapshot.val();
             let songsArr = []
-
-            // for (let key in Object.keys(songsObj)) {
- 
-            //     songsArr.push(songsObj[key])
-            // }
-
             songsArr = values(songsObj)
             this.setState({ allSongs: songsArr })
         })
@@ -81,6 +71,8 @@ class PlaylistCreateContainer extends React.Component {
 
     makePlaylist(){
         let sorted = parabola(this.state.selectedSongs);
+        this.setState({playlist: sorted});
+        this.changePageState();
     }
 
     resetPage(){
@@ -95,6 +87,9 @@ class PlaylistCreateContainer extends React.Component {
                 break;
             case 'waveforms':
                 this.setState({pageState: 'confirm', canAdvance: false})
+                break;
+            case 'confirm':
+                this.setState({pageState: 'playlist', canAdvance: false})
 
         } 
     }
@@ -124,6 +119,11 @@ class PlaylistCreateContainer extends React.Component {
 
                         />)
                 break;
+            case 'playlist':
+                return (<PlaylistContainer 
+                            playlist={this.state.playlist}
+
+                        />)
 
         }
 
@@ -132,7 +132,7 @@ class PlaylistCreateContainer extends React.Component {
     render() {
         let nextBox = this.state.canAdvance ?
         <div 
-            className="nextBox"
+            className={" col-sm-2 nextbox"}
             onClick={this.changePageState.bind(this)}
         >
             Next

@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import {SongBox} from 'components'
 
 class ConfirmContainer extends React.Component {
@@ -24,7 +24,7 @@ class ConfirmContainer extends React.Component {
                         key={song.id}
                         id={song.id}
                         title={song.title}
-                        artist={song.title} 
+                        artist={song.artist} 
                     />
             })}
             With the following Waveform:

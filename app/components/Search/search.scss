@@ -14,3 +14,36 @@
         width: 1px;
     }
 }
+
+.searchbox{
+    padding: 5px;
+    width: 100%;
+}
+
+.searchtext{
+    text-align: center;
+}
+
+.search-results {
+    width: 100%;
+}
+
+.nextbox {
+    border: {
+        style: solid;
+        color: #DDDDDD;
+        width: 1px;
+    }
+    padding: 10px;
+    background-color: teal;
+    color: white;
+}
+
+.not-chosen {
+    width: 50%;
+}
+
+.chosen {
+    width: 50%;
+    background-color: #DDDEEE;
+}
