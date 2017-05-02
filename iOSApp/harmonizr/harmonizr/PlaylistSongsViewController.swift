@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Firebase
 import Alamofire
+import Firebase
 
 class PlaylistSongsViewController:UITableViewController{
     var ref: FIRDatabaseReference!

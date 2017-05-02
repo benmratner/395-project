@@ -26,6 +26,16 @@
 				<string>com.googleusercontent.apps.174232341221-a5gpr7hf6rco1h1g23ughvjh7msucaao</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>mag166.harmonizr</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>harmonizr</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

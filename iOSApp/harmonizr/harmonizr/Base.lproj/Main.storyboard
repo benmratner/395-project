@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -144,20 +145,62 @@
                     <view key="view" contentMode="scaleToFill" id="rTO-jy-aYt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brt-yN-qyh">
+                                <rect key="frame" x="92" y="486" width="191" height="30"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.74117647060000003" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Connect With Spotify">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFC-Ds-VkB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Account Settings" id="S7h-nM-CO2"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Connect your Google Account to Save Playlists within our App " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3nR-p6-S2l">
+                                <rect key="frame" x="67" y="86" width="240" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Connect your Spotify account to export Playlists and More" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JsZ-7b-84B">
+                                <rect key="frame" x="63" y="291" width="240" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rM-2N-3Ld" customClass="GIDSignInButton">
+                                <rect key="frame" x="92" y="154" width="191" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Brt-yN-qyh" firstAttribute="top" secondItem="J8t-W3-P4b" secondAttribute="bottom" constant="466" id="5PK-wE-ZrU"/>
+                            <constraint firstItem="Brt-yN-qyh" firstAttribute="centerX" secondItem="rTO-jy-aYt" secondAttribute="centerX" id="JZJ-ci-cqe"/>
+                            <constraint firstItem="gcD-qR-9Bk" firstAttribute="top" secondItem="Brt-yN-qyh" secondAttribute="bottom" constant="102" id="sf1-5U-zhC"/>
+                            <constraint firstItem="Brt-yN-qyh" firstAttribute="leading" secondItem="rTO-jy-aYt" secondAttribute="leadingMargin" constant="76" id="vdS-k1-kCQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" id="L5X-v3-q2G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpC-kO-TvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2017" y="-195"/>
+            <point key="canvasLocation" x="2581.5999999999999" y="-291.00449775112446"/>
         </scene>
         <!--Playlists-->
         <scene sceneID="4Hz-dl-4Af">
             <objects>
                 <navigationController id="1Pl-bf-TYF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Playlists" image="playlist" id="aAm-aG-wI0"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dJA-G1-KZA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dJA-G1-KZA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -178,11 +221,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" textLabel="YwJ-OH-Qqf" detailTextLabel="iPA-N3-RCL" imageView="8zX-gU-USr" rowHeight="93" style="IBUITableViewCellStyleSubtitle" id="J1e-Fi-4BX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" textLabel="YwJ-OH-Qqf" detailTextLabel="iPA-N3-RCL" imageView="8zX-gU-USr" rowHeight="93" style="IBUITableViewCellStyleSubtitle" id="J1e-Fi-4BX">
                                 <rect key="frame" x="0.0" y="28" width="375" height="93"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J1e-Fi-4BX" id="c7Y-3V-U5x">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="92"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YwJ-OH-Qqf">
@@ -236,7 +279,7 @@
             </objects>
             <point key="canvasLocation" x="4017" y="668"/>
         </scene>
-        <!--View Controller-->
+        <!--Search-->
         <scene sceneID="HbA-6y-we2">
             <objects>
                 <viewController id="Tlk-NS-HN0" sceneMemberID="viewController">
@@ -252,25 +295,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" text="" id="ETE-X4-zeh">
+                                <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Enter Artist or Track Name Here" id="ETE-X4-zeh">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YRm-Wl-UFo">
-                                        <rect key="frame" x="0.0" y="62" width="375" height="43"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YRm-Wl-UFo" id="vqK-3A-wwv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Search" id="h2X-eV-eF7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsL-Y8-nPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

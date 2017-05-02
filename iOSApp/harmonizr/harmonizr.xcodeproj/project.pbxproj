@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E18F2A2C01E40724A044AA0 /* Pods_harmonizr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872BF21B3ADBA9D81E52BF01 /* Pods_harmonizr.framework */; };
+		54CE5773EBF59BF4E9619D5B /* Pods_harmonizr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D9531663CF10EC9216FF0A /* Pods_harmonizr.framework */; };
 		AC09F6601EB2B00B00933B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09F65F1EB2B00B00933B25 /* AppDelegate.swift */; };
 		AC09F6621EB2B00B00933B25 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09F6611EB2B00B00933B25 /* HomeScreenViewController.swift */; };
 		AC09F6651EB2B00B00933B25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC09F6631EB2B00B00933B25 /* Main.storyboard */; };
@@ -19,6 +19,7 @@
 		AC09F6921EB41A2C00933B25 /* AllPlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09F6911EB41A2C00933B25 /* AllPlaylistTableViewController.swift */; };
 		AC09F6941EB4634F00933B25 /* PlaylistSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09F6931EB4634F00933B25 /* PlaylistSongsViewController.swift */; };
 		AC5812221EB74BFB00DC5EE6 /* SearchSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5812211EB74BFB00DC5EE6 /* SearchSongViewController.swift */; };
+		AC58122E1EB7E3CB00DC5EE6 /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58122D1EB7E3CB00DC5EE6 /* AppSettingsViewController.swift */; };
 		ACEB553C1EB72BC0001C2FE6 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACEB553B1EB72BC0001C2FE6 /* green.jpg */; };
 		ACEB553E1EB7317A001C2FE6 /* equalizer.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEB553D1EB7317A001C2FE6 /* equalizer.png */; };
 		ACEB55401EB736C4001C2FE6 /* PlaylistSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB553F1EB736C4001C2FE6 /* PlaylistSettingsViewController.swift */; };
@@ -42,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		872BF21B3ADBA9D81E52BF01 /* Pods_harmonizr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harmonizr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D9531663CF10EC9216FF0A /* Pods_harmonizr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harmonizr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC09F65C1EB2B00B00933B25 /* harmonizr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = harmonizr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC09F65F1EB2B00B00933B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC09F6611EB2B00B00933B25 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		AC09F6911EB41A2C00933B25 /* AllPlaylistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPlaylistTableViewController.swift; sourceTree = "<group>"; };
 		AC09F6931EB4634F00933B25 /* PlaylistSongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistSongsViewController.swift; sourceTree = "<group>"; };
 		AC5812211EB74BFB00DC5EE6 /* SearchSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSongViewController.swift; sourceTree = "<group>"; };
+		AC58122D1EB7E3CB00DC5EE6 /* AppSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		ACEB553B1EB72BC0001C2FE6 /* green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green.jpg; sourceTree = "<group>"; };
 		ACEB553D1EB7317A001C2FE6 /* equalizer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equalizer.png; sourceTree = "<group>"; };
 		ACEB553F1EB736C4001C2FE6 /* PlaylistSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistSettingsViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E18F2A2C01E40724A044AA0 /* Pods_harmonizr.framework in Frameworks */,
+				54CE5773EBF59BF4E9619D5B /* Pods_harmonizr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +98,7 @@
 		0C19F20587B6F477D0E04683 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				872BF21B3ADBA9D81E52BF01 /* Pods_harmonizr.framework */,
+				A8D9531663CF10EC9216FF0A /* Pods_harmonizr.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,6 +144,7 @@
 				AC09F6911EB41A2C00933B25 /* AllPlaylistTableViewController.swift */,
 				AC09F6931EB4634F00933B25 /* PlaylistSongsViewController.swift */,
 				ACEB553F1EB736C4001C2FE6 /* PlaylistSettingsViewController.swift */,
+				AC58122D1EB7E3CB00DC5EE6 /* AppSettingsViewController.swift */,
 				AC09F6631EB2B00B00933B25 /* Main.storyboard */,
 				AC5812211EB74BFB00DC5EE6 /* SearchSongViewController.swift */,
 				AC09F6661EB2B00B00933B25 /* Assets.xcassets */,
@@ -242,6 +245,7 @@
 					AC09F65B1EB2B00B00933B25 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8DRCW9H7FY;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					AC09F66F1EB2B00C00933B25 = {
@@ -363,6 +367,7 @@
 				AC5812221EB74BFB00DC5EE6 /* SearchSongViewController.swift in Sources */,
 				AC09F6941EB4634F00933B25 /* PlaylistSongsViewController.swift in Sources */,
 				AC09F6921EB41A2C00933B25 /* AllPlaylistTableViewController.swift in Sources */,
+				AC58122E1EB7E3CB00DC5EE6 /* AppSettingsViewController.swift in Sources */,
 				AC09F6601EB2B00B00933B25 /* AppDelegate.swift in Sources */,
 				ACEB55401EB736C4001C2FE6 /* PlaylistSettingsViewController.swift in Sources */,
 			);
@@ -464,6 +469,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -506,6 +512,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -517,11 +524,19 @@
 			baseConfigurationReference = DCD5007F4907D8393F4CC51C /* Pods-harmonizr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8DRCW9H7FY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/harmonizr",
+				);
 				INFOPLIST_FILE = harmonizr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mag166.harmonizr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -531,11 +546,18 @@
 			baseConfigurationReference = E3D1DC7BEA6305B3249F2389 /* Pods-harmonizr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8DRCW9H7FY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/harmonizr",
+				);
 				INFOPLIST_FILE = harmonizr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mag166.harmonizr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
