@@ -23,7 +23,13 @@ class PlaylistSongsViewController:UITableViewController{
 
     }
     
+    @IBAction func editOrder(_ sender: Any) {
+        self.isEditing = !self.isEditing
+    }
+
+    
     func getSongs(){
+        songArray.removeAll()
         let userID = FIRAuth.auth()?.currentUser?.uid
         self.navigationItem.title = playlistName
        
@@ -37,11 +43,54 @@ class PlaylistSongsViewController:UITableViewController{
         })
 
     }
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        var holder = songArray[sourceIndexPath.row]
+        songArray.remove(at: sourceIndexPath.row)
+        songArray.insert(holder, at: destinationIndexPath.row)
+        let songRef = ref.child("playlistSongs").child(playlistID).child("songs")
+        
+        var index:Int = 1
+        for song in songArray{
+            songRef.child("\(index)").setValue(song)
+            print(song)
+            index += 1
+        }
+    }
+    
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            songArray.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            let songRef = ref.child("playlistSongs").child(playlistID).child("songs")
+            songRef.removeValue()
+            songRef.removeAllObservers()
+            
+            var index:Int = 1
+            for song in songArray{
+                songRef.child("\(index)").setValue(song)
+                print(song)
+                index += 1
+            }
+            
+            getSongs()
+            
+        }
+    }
+    
+ 
+    
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songArray.count
     }
+
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -93,7 +142,7 @@ class PlaylistSongsViewController:UITableViewController{
                                 
                             }
                             else{
-                                
+
                             }
                         }
                     
@@ -108,7 +157,8 @@ class PlaylistSongsViewController:UITableViewController{
             }
             
             else{
-                
+                cell?.imageView?.image = UIImage(named: "green.jpg")
+                cell?.imageView?.clipsToBounds = true
             }
             cell?.detailTextLabel?.text = artist
             
@@ -126,11 +176,6 @@ class PlaylistSongsViewController:UITableViewController{
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
-    }
-    
 
 }
 

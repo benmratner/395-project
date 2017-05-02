@@ -31,7 +31,9 @@ class AllPlaylistTableViewController : UITableViewController{
 
 
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     
     func handleCancel(alertView: UIAlertAction!){

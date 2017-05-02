@@ -20,6 +20,9 @@
 		AC09F6941EB4634F00933B25 /* PlaylistSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09F6931EB4634F00933B25 /* PlaylistSongsViewController.swift */; };
 		AC5812221EB74BFB00DC5EE6 /* SearchSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5812211EB74BFB00DC5EE6 /* SearchSongViewController.swift */; };
 		AC58122E1EB7E3CB00DC5EE6 /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58122D1EB7E3CB00DC5EE6 /* AppSettingsViewController.swift */; };
+		AC6282151EB82EB600E394F5 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6282121EB82EB600E394F5 /* SpotifyAudioPlayback.framework */; };
+		AC6282161EB82EB600E394F5 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6282131EB82EB600E394F5 /* SpotifyAuthentication.framework */; };
+		AC6282171EB82EB600E394F5 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6282141EB82EB600E394F5 /* SpotifyMetadata.framework */; };
 		ACEB553C1EB72BC0001C2FE6 /* green.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACEB553B1EB72BC0001C2FE6 /* green.jpg */; };
 		ACEB553E1EB7317A001C2FE6 /* equalizer.png in Resources */ = {isa = PBXBuildFile; fileRef = ACEB553D1EB7317A001C2FE6 /* equalizer.png */; };
 		ACEB55401EB736C4001C2FE6 /* PlaylistSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB553F1EB736C4001C2FE6 /* PlaylistSettingsViewController.swift */; };
@@ -62,6 +65,10 @@
 		AC09F6931EB4634F00933B25 /* PlaylistSongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistSongsViewController.swift; sourceTree = "<group>"; };
 		AC5812211EB74BFB00DC5EE6 /* SearchSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSongViewController.swift; sourceTree = "<group>"; };
 		AC58122D1EB7E3CB00DC5EE6 /* AppSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
+		AC6282121EB82EB600E394F5 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		AC6282131EB82EB600E394F5 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		AC6282141EB82EB600E394F5 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		AC6282181EB82F5200E394F5 /* harmonizr-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "harmonizr-Bridging-Header.h"; sourceTree = "<group>"; };
 		ACEB553B1EB72BC0001C2FE6 /* green.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green.jpg; sourceTree = "<group>"; };
 		ACEB553D1EB7317A001C2FE6 /* equalizer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equalizer.png; sourceTree = "<group>"; };
 		ACEB553F1EB736C4001C2FE6 /* PlaylistSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistSettingsViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6282171EB82EB600E394F5 /* SpotifyMetadata.framework in Frameworks */,
 				54CE5773EBF59BF4E9619D5B /* Pods_harmonizr.framework in Frameworks */,
+				AC6282161EB82EB600E394F5 /* SpotifyAuthentication.framework in Frameworks */,
+				AC6282151EB82EB600E394F5 /* SpotifyAudioPlayback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +147,7 @@
 		AC09F65E1EB2B00B00933B25 /* harmonizr */ = {
 			isa = PBXGroup;
 			children = (
+				AC6282181EB82F5200E394F5 /* harmonizr-Bridging-Header.h */,
 				ACEB553B1EB72BC0001C2FE6 /* green.jpg */,
 				ACEB553D1EB7317A001C2FE6 /* equalizer.png */,
 				AC09F65F1EB2B00B00933B25 /* AppDelegate.swift */,
@@ -151,6 +162,9 @@
 				AC09F6681EB2B00B00933B25 /* LaunchScreen.storyboard */,
 				AC09F68D1EB3825700933B25 /* GoogleService-Info.plist */,
 				AC09F66B1EB2B00B00933B25 /* Info.plist */,
+				AC6282121EB82EB600E394F5 /* SpotifyAudioPlayback.framework */,
+				AC6282131EB82EB600E394F5 /* SpotifyAuthentication.framework */,
+				AC6282141EB82EB600E394F5 /* SpotifyMetadata.framework */,
 			);
 			path = harmonizr;
 			sourceTree = "<group>";
@@ -535,7 +549,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mag166.harmonizr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/minhal/Desktop/395-project/iOSApp/harmonizr/harmonizr/harmonizr-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -557,7 +571,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mag166.harmonizr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/minhal/Desktop/395-project/iOSApp/harmonizr/harmonizr/harmonizr-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
